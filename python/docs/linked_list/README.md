@@ -16,10 +16,14 @@ The to string method needs to apply arguments: value and return a string represe
 
 ## Approach & Efficiency
 
-BigO for
+BigO
+time:
+space:
+
 
 ## API
 
 Insert method appends a new node at the HEAD of the linked list it traverses through.
 Includes method will return truthy or falsy based on the data being passed through the node.
+__repr__ method is to return node values as string objects.
 
