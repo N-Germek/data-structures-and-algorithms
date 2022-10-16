@@ -3,12 +3,15 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
+    def __repr__(self):
+        return f'{self.head}'
+
     def insert(self, value):
         node = Node(value)
         if self.head is None:
             self.head = node
         #     inserted the second node into the head position
-        if self.head is not None:
+        elif self.head is not None:
             node.next = self.head
 #             assigned head to be new node
             self.head = node
@@ -34,11 +37,6 @@ class LinkedList:
         return False
 
 
-# if self.value == self.ll[]:
-#     return True
-
-
-# while the nodes value not in list, return False else return True
 class Node:
     def __init__(self, value, next=None):
         # initialization here
@@ -52,6 +50,9 @@ class Node:
         # method body here
         pass
 
+    def __repr__(self):
+        return f'{self.value}, {self.next}'
+
 
 class TargetError:
     pass
@@ -59,15 +60,14 @@ class TargetError:
 
 if __name__ == '__main__':
 
-    ll = LinkedList
+    ll = LinkedList()
     print(ll)
     node = Node(10, None)
     print(node.value)
-    node.value = 11
+    ll.insert("banana")
     print(node.value)
-    ll.head = node
+    ll.insert("apple")
     print(ll.head.value)
-    linked_list = ll
-    print(linked_list.value)
+    print(ll.__repr__())
 # node2 = Node(5, node)
 # ll.head = node2
