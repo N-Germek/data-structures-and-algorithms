@@ -3,7 +3,7 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
-    def __repr__(self):
+    def __str__(self):
         return f'{self.head}'
 
     def insert(self, value):
@@ -50,7 +50,7 @@ class Node:
         # method body here
         pass
 
-    def __repr__(self):
+    def __str__(self):
         return f'{self.value}, {self.next}'
 
 
@@ -68,6 +68,6 @@ if __name__ == '__main__':
     print(node.value)
     ll.insert("apple")
     print(ll.head.value)
-    print(ll.__repr__())
+    print(ll.__str__())
 # node2 = Node(5, node)
 # ll.head = node2
