@@ -28,6 +28,8 @@ Space: O(n)
 
 ## API
 
+[Whiteboard](linked_list_insertions.png)
+
 Append method appends a new node as the new HEAD of the linked list it traverses through.
 Insert before method will return a linked list with a new node with a given value before the first node in the linked list.
 Insert after method will return a linked list with a new node with a given value after the first node in the linked list.
