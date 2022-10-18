@@ -15,9 +15,14 @@ The to string method needs to apply arguments: value and return a string represe
 
 ## Author
 
-Natalija Germek. Daniel Brott assisted in troubleshooting my __str__ method to get it to pass.
+Natalija Germek with clarification assistance from Daniel Brott.
 
 ## Approach & Efficiency
+
+Version 1.0
+Version 1.2
+
+Daniel Brott assisted in troubleshooting my __str__ method which was placed in my Node class in error versus in my Linked List class.
 
 BigO
 Time: O(n)
