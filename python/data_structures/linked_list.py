@@ -4,7 +4,15 @@ class LinkedList:
         self.head = head
 
     def __str__(self):
-        return f'{self.head}'
+        # print(ll)
+        return_string = ''
+        current = self.head
+
+        while current:
+            return_string += f'{{ {current.value} }} -> '
+            current = current.next
+            print(return_string)
+        return return_string + "None"
 
     def insert(self, value):
         node = Node(value)
@@ -50,24 +58,25 @@ class Node:
         # method body here
         pass
 
-    def __str__(self):
-        return f'{self.value}, {self.next}'
-
 
 class TargetError:
     pass
 
 
-if __name__ == '__main__':
-
-    ll = LinkedList()
-    print(ll)
-    node = Node(10, None)
-    print(node.value)
-    ll.insert("banana")
-    print(node.value)
-    ll.insert("apple")
-    print(ll.head.value)
-    print(ll.__str__())
+# if __name__ == '__main__':
+#
+#     ll = LinkedList()
+#     print(ll)
+#     node1 = Node("a")
+#     node2 = Node("b")
+#     node3 = Node("c")
+#     node = Node(10, None)
+#     print(node.value)
+#     ll.insert("banana")
+#     print(node.value)
+#     ll.insert("apple")
+#     print(ll.head.value)
+#     print(ll.__str__())
+#     print(ll)
 # node2 = Node(5, node)
 # ll.head = node2
