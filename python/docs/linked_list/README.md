@@ -11,19 +11,20 @@ Create a Linked List class, include a HEAD property that instantiates an empty l
 The linked list class should contain the following methods: insert, includes, and to string.
 The insert method needs to apply the Arguments: value, Return: nothing, and add a new node with that value to the head of the list with an O(1) time performance.
 The includes method needs to apply the arguments: value, return a Boolean that indicates that value's existence in the list.
-The to string method needs to apply arguments: value and return a string representing all the values in the format of "{ a } -> { b } -> { c } -> NULL".
+The to string method needs to apply arguments: value and return a string representing all the values in the format of "{ a } -> { b } -> { c } -> None".
 
+## Author
+
+Natalija Germek. Daniel Brott assisted in troubleshooting my __str__ method to get it to pass.
 
 ## Approach & Efficiency
 
 BigO
-time:
-space:
-
+Time: O(n)
+Space: O(n)
 
 ## API
 
 Insert method appends a new node at the HEAD of the linked list it traverses through.
 Includes method will return truthy or falsy based on the data being passed through the node.
-__repr__ method is to return node values as string objects.
-
+My to string method aka __str__ method will return a string of a linked list with all the values in the format of "{ a } -> { b } -> { c } -> None".
