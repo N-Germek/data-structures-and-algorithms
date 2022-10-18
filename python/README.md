@@ -7,7 +7,8 @@
 [Code Challenge 1](docs/array_reverse/README.md)
 [Code Challenge 2](docs/array-insert-shift/README.md)
 [Code Challenge 3](docs/list_binary_search/README.md)
-[Code Challenge 4](docs/linked_list/README.md)
+[Code Challenge 5](docs/linked_list/README.md)
+[Code Challenge 6](docs/linked_list_insertions/README.md)
 
 ### Folder and Challenge Setup
 
