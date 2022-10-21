@@ -9,6 +9,7 @@
 [Code Challenge 3](docs/list_binary_search/README.md)
 [Code Challenge 5](docs/linked_list/README.md)
 [Code Challenge 6](docs/linked_list_insertions/README.md)
+[Code Challenge 7](docs/linked_list_kth/README.md)
 
 ### Folder and Challenge Setup
 
