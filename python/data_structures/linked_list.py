@@ -31,7 +31,6 @@ class LinkedList:
     def traverse(self):
         current = self.head
         while current is not None:
-            pass
             current = current.next
         return current
 
@@ -43,6 +42,15 @@ class LinkedList:
             else:
                 current = current.next
         return False
+
+    def append(self, value):
+        current = self.head
+        final_node = node.value
+        while current is not None:
+            self.traverse()
+        else:
+            self.insert()
+            self.head = Node(value)
 
 
 class Node:
@@ -63,10 +71,13 @@ class TargetError:
     pass
 
 
-# if __name__ == '__main__':
-#
-#     ll = LinkedList()
-#     print(ll)
+if __name__ == '__main__':
+
+    ll = LinkedList([1, 3, 5, 6])
+    print(ll)
+    ll.append(4)
+    print(ll)
+    node1 = 
 #     node1 = Node("a")
 #     node2 = Node("b")
 #     node3 = Node("c")
