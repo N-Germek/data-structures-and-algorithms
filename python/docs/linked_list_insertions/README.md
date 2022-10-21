@@ -21,6 +21,7 @@ Code Challenge author: Natalija Germek.
 ## Approach & Efficiency
 
 Version 1.0
+Version 1.2
 
 BigO
 Time: O(n)
