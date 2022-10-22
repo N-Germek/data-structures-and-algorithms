@@ -51,7 +51,9 @@ class LinkedList:
     def insert_before(self, value, new_value):
         prior_node = Node(value)
         current = self.traverse()
-        current.next = prior_node
+        current.next = new_value
+        new_value = prior_node - 1
+        return new_value
 
 
 
