@@ -30,7 +30,7 @@ class LinkedList:
         #       Current
     def traverse(self):
         current = self.head
-        while current is not None:
+        while current.next is not None:
             current = current.next
         return current
 
@@ -44,13 +44,17 @@ class LinkedList:
         return False
 
     def append(self, value):
-        current = self.head
-        final_node = node.value
-        while current is not None:
-            self.traverse()
-        else:
-            self.insert()
-            self.head = Node(value)
+        final_node = Node(value)
+        current = self.traverse()
+        current.next = final_node
+
+    def insert_before(self, value, new_value):
+        prior_node = Node(value)
+        current = self.traverse()
+        current.next = new_value
+        new_value = prior_node - 1
+        return new_value
+
 
 
 class Node:
@@ -74,11 +78,10 @@ class TargetError:
 if __name__ == '__main__':
 
     ll = LinkedList([1, 3, 5, 6])
-    print(ll)
+    # print(ll)
     ll.append(4)
     print(ll)
-    node1 = 
-#     node1 = Node("a")
+    # node = Node("a")
 #     node2 = Node("b")
 #     node3 = Node("c")
 #     node = Node(10, None)

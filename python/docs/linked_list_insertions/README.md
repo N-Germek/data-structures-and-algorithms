@@ -22,6 +22,7 @@ Code Challenge author: Natalija Germek.
 
 Version 1.0
 Version 1.2
+Version 1.3
 
 BigO
 Time: O(n)
