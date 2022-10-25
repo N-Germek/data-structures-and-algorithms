@@ -44,6 +44,15 @@ class LinkedList:
         return False
 
     def append(self, value):
+        linked-list-zip
+        current = self.head
+        # final_node = node.value
+        while current is not None:
+            self.traverse()
+        else:
+            self.insert()
+            self.head = Node(value)
+
         final_node = Node(value)
         current = self.traverse()
         current.next = final_node
@@ -81,7 +90,15 @@ if __name__ == '__main__':
     # print(ll)
     ll.append(4)
     print(ll)
+    ll1 = []
+    ll1.insert[1, 2, 3]
+    ll2 = []
+    ll2 = ["a", "b", "c"]
+    # node1 =
+#     node1 = Node("a")
+
     # node = Node("a")
+
 #     node2 = Node("b")
 #     node3 = Node("c")
 #     node = Node(10, None)
