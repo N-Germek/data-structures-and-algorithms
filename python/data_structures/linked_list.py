@@ -45,7 +45,7 @@ class LinkedList:
 
     def append(self, value):
         current = self.head
-        final_node = node.value
+        # final_node = node.value
         while current is not None:
             self.traverse()
         else:
@@ -77,7 +77,11 @@ if __name__ == '__main__':
     print(ll)
     ll.append(4)
     print(ll)
-    node1 = 
+    ll1 = []
+    ll1.insert[1, 2, 3]
+    ll2 = []
+    ll2 = ["a", "b", "c"]
+    # node1 =
 #     node1 = Node("a")
 #     node2 = Node("b")
 #     node3 = Node("c")
