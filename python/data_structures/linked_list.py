@@ -44,26 +44,27 @@ class LinkedList:
         return False
 
     def append(self, value):
-        linked-list-zip
+        # linked-list-zip
         current = self.head
-        # final_node = node.value
-        while current is not None:
-            self.traverse()
-        else:
-            self.insert()
-            self.head = Node(value)
-
         final_node = Node(value)
-        current = self.traverse()
-        current.next = final_node
+        if current is None:
+            current = Node(value)
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = final_node
 
     def insert_before(self, value, new_value):
-        prior_node = Node(value)
-        current = self.traverse()
-        current.next = new_value
-        new_value = prior_node - 1
-        return new_value
-
+        # prior_node = Node(value)
+        current = self.head
+        while current and current.next is not None:
+            if current.next.value == value:
+                # the order of values passed in the parameter determines the order of updating
+                temp_value = Node(new_value, current.next)
+                current.next = temp_value
+                return temp_value
+            current = current.next
 
 
 class Node:
@@ -85,9 +86,9 @@ class TargetError:
 
 
 if __name__ == '__main__':
-
-    ll = LinkedList([1, 3, 5, 6])
-    # print(ll)
+    ll = LinkedList()
+    # ll = LinkedList([1, 3, 5, 6])
+    print(ll)
     ll.append(4)
     print(ll)
     ll1 = []
