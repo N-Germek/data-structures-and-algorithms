@@ -22,22 +22,21 @@ peek()
 is_empty()
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 After the initial creation of my node, I create a whiteboard of all the elements needed to accomplish for each method. Additionally, I complete my README.md file to set up my files.
 BigO for each method is as follows:
 
 Stack:
-push()
-pop()
-peek()
-is_empty()
+push() is O(1).
+pop() is O(1).
+peek() is O(1).
+is_empty() is O(1).
 
 Queue:
-enqueue()
-dequeue()
-peek()
-is_empty()
+enqueue() is O(1).
+dequeue() is O(1).
+peek() is O(1).
+is_empty() is O(1).
 
 ## Methods
 
