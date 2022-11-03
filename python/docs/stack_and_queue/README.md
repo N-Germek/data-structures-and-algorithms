@@ -22,6 +22,8 @@ peek()
 is_empty()
 
 ## Approach & Efficiency
+Version 1.0 1-Nov-2022 "Initial creation of methods and set up of README."
+Version 2.0 2-Nov-2022 "created push method for stack and started pop, peek and enqueue methods."
 
 After the initial creation of my node, I create a whiteboard of all the elements needed to accomplish for each method. Additionally, I complete my README.md file to set up my files.
 BigO for each method is as follows:
