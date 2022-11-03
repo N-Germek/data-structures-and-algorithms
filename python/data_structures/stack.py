@@ -38,15 +38,22 @@ class Stack:
     # top < -- top.next
     # temp.next < -- null
     # return temp.value
-    def pop(self):
+    def pop(self, value):
         temp = self.top
-        top = self.value
-        if self.temp.next is None:
-            Exception
+        top = Node(value)
+        if temp is None:
+            return Exception
         else:
             temp = self.next.top
             top = self.temp.value
         return temp.value
+
+    def peek(self, value):
+        self.top = Node(value)
+        if self.top is None:
+            return Exception
+        else:
+            return self.top.value
 
 
 class Node:
