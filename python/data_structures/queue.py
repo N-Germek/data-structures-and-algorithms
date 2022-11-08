@@ -27,7 +27,7 @@ class Queue:
 
     def enqueue(self, value):
         while self.next is not None:
-            node.self(traverse()):
+            node.traverse():
         self.next = Node(value)
 
 
