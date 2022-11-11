@@ -33,47 +33,48 @@ class Queue:
     def __init__(self, front=None):
         # initialization here
         self.front = front
-        self.next = next
+        self.rear = None
 
     def some_method(self):
         # method body here
         pass
 
-    def traverse(self):
-        current = self.front
-        while current.next is not None:
-            current = current.next
-        return current
+    # def traverse(self):
+    #     current = self.front
+    #     while current.next is not None:
+    #         current = current.next
+    #     return current
 
     def enqueue(self, value):
-        if not self.front:
-            self.front = Node(value)
-        else:
-            while self.next is not None:
-                current = self.front
-                node = Node(value)
-                final_node = self.traverse()
-                current = final_node
-                current.next = node
+        new_node = Node(value)
+        Node.next = self.rear(Node += 1)
+        self.rear = new_node
 
-    # def pop(self):
-    #     # temp = self.top
-    #     # top = Node(value)
-    #     if not self.top:
-    #         raise InvalidOperationError(Exception("Method not allowed on empty collection"))
-    #     temp = self.top
-    #     self.top = self.top.next
-    #     return temp.value
+        # if not self.front:
+        #     self.front = Node(value)
+        # else:
+        #     while self.front.next is not None:
+        #         current = self.front
+        #         node = Node(value)
+        #         final_node = self.traverse()
+        #         current = final_node
+        #         current.back = node
+
     def dequeue(self):
         if self.front is None:
             raise InvalidOperationError(Exception())
-        elif self.front is not None:
+        if self.front:
             temp = self.front
-            temp.next = None
+            self.front = self.front.back
+            temp.back = None
+            print(temp.value)
             return temp.value
 
     def peek(self):
-        pass
+        if self.front is None:
+            return self.front.value
+        else:
+            raise InvalidOperationError(Exception())
 
     def is_empty(self):
         if self.front is None:
