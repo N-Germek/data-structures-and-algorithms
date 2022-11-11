@@ -47,18 +47,11 @@ class Queue:
 
     def enqueue(self, value):
         new_node = Node(value)
-        Node.next = self.rear(Node += 1)
-        self.rear = new_node
-
-        # if not self.front:
-        #     self.front = Node(value)
-        # else:
-        #     while self.front.next is not None:
-        #         current = self.front
-        #         node = Node(value)
-        #         final_node = self.traverse()
-        #         current = final_node
-        #         current.back = node
+        if not self.front:
+            self.front = new_node
+        else:
+            while self.rear.next is None:
+                self.rear.next = new_node
 
     def dequeue(self):
         if self.front is None:

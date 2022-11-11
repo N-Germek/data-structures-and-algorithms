@@ -13,6 +13,7 @@
 [Code Challenge 8](docs/linked_list_zip/README.md)
 [Code Challenge 10](docs/stack_and_queue/README.md)
 [Code Challenge 11](docs/stack_queue_pseudo/README.md)
+[Code Challenge 12](docs/stack_queue_animal_shelter/README.md)
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
