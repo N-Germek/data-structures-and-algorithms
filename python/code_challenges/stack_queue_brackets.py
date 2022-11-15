@@ -22,7 +22,11 @@ brackets = ["[", "]", "(", ")", "{", "}"]
 
 
 def is_palindrome(chars):
-    return chars == chars[::-1]
+    # return chars == chars[::-1]
+    for i in range(0, int(len(chars)/2)):
+        if chars[i] != chars[len(chars)-i-1]:
+            return False
+    return True
 
 
 def multi_bracket_validation(str_input):
