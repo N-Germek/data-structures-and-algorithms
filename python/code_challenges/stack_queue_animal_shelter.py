@@ -14,6 +14,7 @@ import copy
 
 class AnimalShelter:
     pass
+
 # class AnimalShelter:
 #     def __init__(self):
 #         self.front = None
@@ -84,5 +85,3 @@ class AnimalShelter:
 #     def __init__(self, value=None, next=None):
 #         self .value = value
 #         self.next = next
-
-# worked with TA and nothing works. will resubmit with working code and import to working Queue.py for proper passing.

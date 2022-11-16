@@ -16,10 +16,13 @@ Curly Brackets : {}
 
 ## Approach & Efficiency
 BigO:
-Time:
-Space:
-
-My approach for my algorithm was identify the character of the string and then input that index into a stack list, pop it off to skip if not on stack list. For my next itteration, I am looking at the items in the stack list and comparing if the values are opposite of eachother.  If the comparison is true, return True, if the comparison is false, raise exception with message for corresponding missing bracket.
+Time: O(n)
+Space: O(n)
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+
+My approach to this problem domain was to identify the character of the string.
+For each character in the string, if the character was the same as one of the brackets in my bracket list, add it to a temporary storage list until no more string characters exist.
+In the same order that the brackets were being added to that array, if the order was the same then I would remove them from my storage list (This is where I visualize a palindrome.)
+Once the storage list was at zero, I could tell that it was a successful palindrome of brackets and I returned a boolean True.
+If the brackets did not create a palindrome, then it would return a boolean False.
