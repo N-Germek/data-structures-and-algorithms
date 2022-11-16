@@ -39,12 +39,6 @@ class Queue:
         # method body here
         pass
 
-    # def traverse(self):
-    #     current = self.front
-    #     while current.next is not None:
-    #         current = current.next
-    #     return current
-
     def enqueue(self, value):
         new_node = Node(value)
         if not self.front:
