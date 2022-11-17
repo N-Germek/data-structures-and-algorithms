@@ -25,6 +25,7 @@ is_empty()
 Version 1.0 1-Nov-2022 "Initial creation of methods and set up of README."
 Version 2.0 2-Nov-2022 "created push method for stack and started pop, peek and enqueue methods."
 Version 3.0 8-Nov-2022 "finalized queue methods"
+Version 4.0 16-Nov-2022 "refactored all queue methods"
 
 After the initial creation of my node, I create a whiteboard of all the elements needed to accomplish for each method. Additionally, I complete my README.md file to set up my files.
 BigO for each method is as follows:
@@ -56,5 +57,3 @@ enqueue() which will take in a value, add a new node with the value to the back 
 dequeue() which will take in no arguments, return the value from the node in the front of the queue, remove the node from the front of the queue and wil raise an exception if it is called on an empty queue.
 peek() which will take in no arguments, return the value of the node located in the front of the queue and will raise an exception when it is called on an empty queue.
 is_empty() which will take in no arguments and will return a boolean indicating True or False if the queue is empty or not.
-
-<!-- Description of each method publicly available to your Stack and Queue-->
