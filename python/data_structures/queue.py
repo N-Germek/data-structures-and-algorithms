@@ -43,25 +43,29 @@ class Queue:
         new_node = Node(value)
         if not self.front:
             self.front = new_node
+            self.rear = new_node
         else:
             while self.rear.next is None:
                 self.rear.next = new_node
 
     def dequeue(self):
-        if self.front is None:
-            raise InvalidOperationError(Exception())
+        # if self.front is None:
+        #     raise InvalidOperationError(Exception())
         if self.front:
             temp = self.front
-            self.front = self.front.back
-            temp.back = None
-            print(temp.value)
+            self.front = self.front.next
+            temp.next = None
             return temp.value
+        else:
+            if self.rear is not None:
+                self.rear = None
+                raise InvalidOperationError(Exception())
 
     def peek(self):
         if self.front is None:
-            return self.front.value
-        else:
             raise InvalidOperationError(Exception())
+        else:
+            return self.front.value
 
     def is_empty(self):
         if self.front is None:
