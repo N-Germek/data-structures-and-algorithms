@@ -1,4 +1,4 @@
-from data_structures.queue import Queue
+# from data_structures.queue import Queue
 import copy
 
 
@@ -30,14 +30,12 @@ class AnimalShelter:
         return self
 
     def dequeue(self, pref):
-        if self.front is None:
-            raise Exception("Queue is empty.")
 
         if self.front.value["animal"] == pref:
-            remove = self.front.value["animal"]
+            removed_animal = self.front.value["animal"]
             self.front = self.front.next
             self.length -= 1
-            return remove
+            return removed_animal
         # if self.front.value["animal"] != pref:
         queue_length = copy.deepcopy(self.length)
         answer = None
@@ -63,7 +61,8 @@ class AnimalShelter:
             self.front = self.front.next
             self.rear.next = dequeued_node
             self.rear = dequeued_node
-
+        if self.front is None:
+            raise Exception("Queue is empty.")
         return answer
 
 

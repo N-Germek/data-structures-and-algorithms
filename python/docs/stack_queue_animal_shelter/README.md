@@ -4,10 +4,11 @@ enqueue() - this passes the animal argument in which case animal can either be c
 dequeue() - this passes the pref argument in which pref can either be dog or cat, then will return a dog or cat based on preference. If the preference is not a dog or a cat, it will return None.
 
 ## Whiteboard Process
-[Stack-queue-animal-shelter whiteboard](/docs/stack_queue_animal_shelter/stack-queue-animal-shelter.png)
+[Stack-queue-animal-shelter Whiteboard](stack-queue-animal-shelter.png)
 
 ## Approach & Efficiency
-BigO is undetermined since algorithm and code do not work.
+BigO is undetermined
+Version 2.0 Nov-16-2022 "Refactored code to pass tests"
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
