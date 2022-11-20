@@ -42,7 +42,7 @@ class AnimalShelter:
 
         while queue_length >= 0:
             if self.front.value["animal"] == pref:
-                answer = self.front.value["animal"]
+                pref = self.front.value["animal"]
                 self.front = self.front.next
                 self.length -= 1
                 queue_length -= 1
@@ -63,7 +63,7 @@ class AnimalShelter:
             self.rear = dequeued_node
         if self.front is None:
             raise Exception("Queue is empty.")
-        return answer
+        return pref
 
 
 class Dog:
@@ -71,7 +71,8 @@ class Dog:
 
 
 class Cat:
-    def __init__(self, value=None):
+    def __init__(self, pref, value=None):
+        self.pref = "cat"
         self.value = value
 
 
