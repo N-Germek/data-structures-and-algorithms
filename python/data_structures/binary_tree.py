@@ -1,3 +1,6 @@
+from data_structures.invalid_operation_error import InvalidOperationError
+
+
 class BinaryTree:
     """
     ALGORITHM preOrder(root)
@@ -88,6 +91,25 @@ class BinaryTree:
             value_list3.append(input_node3.value)
         another_walk(self.root, values)
         return values
+
+    def find_maximum_value(self, values=[]):
+        max_val = 0
+        current = self.root
+
+        def walking(current_val, value_list4):
+            if current is not None:
+                if current_val.left:
+                    walking(current_val.left, value_list4)
+                if current_val.right:
+                    walking(current_val.right, value_list4)
+        if self.root is None:
+            return max_val
+        if self.root == "":
+            raise InvalidOperationError(Exception("Method not allowed on string."))
+        while current.value > max_val:
+            max_val += current.value
+            walking(self.root, values)
+        return max_val
 
 
 class Node:
