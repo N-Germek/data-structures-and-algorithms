@@ -24,6 +24,8 @@ Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once.
 
 ## Approach & Efficiency
+Version 1.0 - Nov 19, 2022, implemented pre-order method in binary tree class.
+Version 2.0 - Nov 21, 2022, implemented in-order and post-order methods in binary tree class.
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## API

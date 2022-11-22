@@ -10,9 +10,9 @@ class BinaryTree:
   if root.right is not None
       preOrder(root.right)
 
-      ALGORITHM inOrder(root)
-    // INPUT <-- root node
-    // OUTPUT <-- in-order output of tree node's values
+     ALGORITHM inOrder(root)
+    INPUT <-- root node
+    OUTPUT <-- in-order output of tree node's values
 
     if root.left is not None
         inOrder(root.left)
@@ -21,6 +21,18 @@ class BinaryTree:
 
     if root.right is not None
         inOrder(root.right)
+
+     ALGORITHM postOrder(root)
+    INPUT <-- root node
+    OUTPUT <-- post-order output of tree node's values
+
+    if root.left is not None
+        postOrder(root.left)
+
+    if root.right is not None
+        postOrder(root.right)
+
+    OUTPUT <-- root.value
     """
 
     def __init__(self, root=None):
@@ -29,6 +41,21 @@ class BinaryTree:
     def some_method(self):
         # method body here
         pass
+
+    # def pre_order(self):
+
+    # pre_order_traversal = []
+    #     if self.root is not None:
+    #         return None
+    #
+    #     def traversal_pre_order(root):
+    #         pre_order_traversal.append(root.value)
+    #         if root.left is not None:
+    #             traversal_pre_order(root.left)
+    #         if root.right is not None:
+    #             traversal_pre_order(root.right)
+    #         traversal_pre_order(self.root)
+    #         return pre_order_traversal
 
     def pre_order(self, values=[]):
 
@@ -41,20 +68,25 @@ class BinaryTree:
         walk(self.root, values)
         return values
 
-    # left, root, right
     def in_order(self, values=[]):
         def new_walk(input_node2, value_list2):
-            # new_root = self.root.value
-            if not input_node2.left:
-                return
-            new_walk(input_node2.left, value_list2)
-            value_list2.append(input_node2.left.value)
+            if input_node2.left:
+                new_walk(input_node2.left, value_list2)
             value_list2.append(input_node2.value)
-            value_list2.append(input_node2.right.value)
-            new_walk(input_node2.right, value_list2)
+            if input_node2.right:
+                new_walk(input_node2.right, value_list2)
 
-            #
         new_walk(self.root, values)
+        return values
+
+    def post_order(self, values=[]):
+        def another_walk(input_node3, value_list3):
+            if input_node3.left:
+                another_walk(input_node3.left, value_list3)
+            if input_node3.right:
+                another_walk(input_node3.right, value_list3)
+            value_list3.append(input_node3.value)
+        another_walk(self.root, values)
         return values
 
 
