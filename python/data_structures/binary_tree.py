@@ -102,11 +102,12 @@ class BinaryTree:
                     walking(current_val.left, value_list4)
                 if current_val.right:
                     walking(current_val.right, value_list4)
+                value_list4.append(current_val.value)
         if self.root is None:
             return max_val
         if self.root == "":
             raise InvalidOperationError(Exception("Method not allowed on string."))
-        while current.value > max_val:
+        if current.value > max_val:
             max_val += current.value
             walking(self.root, values)
         return max_val

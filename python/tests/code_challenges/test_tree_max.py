@@ -13,3 +13,17 @@ def test_max_val():
     expected = 30
 
     assert actual == expected
+
+
+# test Natalija created
+# @pytest.mark.skip("TODO")
+# def test_max_val_str():
+#     tree = BinaryTree()
+#     tree.root = Node(int)
+#     tree.root.left = Node(int)
+#     tree.root.right = Node(int)
+#
+#     actual = tree.find_maximum_value(int)
+#     expected = int
+#
+#     assert actual == expected
