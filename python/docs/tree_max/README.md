@@ -5,11 +5,13 @@ find_maximum_value() which takes in no arguments and returns the maximum value n
 
 ## Whiteboard Process
 [Tree Max Whiteboard Documentation](/docs/tree_max/tree_max.png)
+[Tree Max Method](/data_structures/binary_tree.py)
 
 ## Approach & Efficiency
-This is a O(n) approach.
+This is a O(n) time and space approach to accommodate the for loop needed after recursion in identify the max value of the node in the list created.
 
 ## Solution
 Version 1.0 Nov 21, 2023 - implemented whiteboard and algorithm to tree-max code challenge
-I created a temporary element to store the value. Using the post-order() traversal method, I reviewed the node values from left to right. Using a boolean, if the node value is higher than the temporary value, I reassigned the temporary value to the higher value. Finally, I returned the highest node value after traversing the entire tree.
+Version 2.0 Nov 22, 2023 - finalized tree_max method and updated README.
 
+To begin, I assign the max value to None to account for negative integers. I called my post_order() method to traverse my nodes and save the values to a list. Using a for loop, I checked if the value of each node is greater than the max value, updated max value with that value. Finally, I returned the max value.

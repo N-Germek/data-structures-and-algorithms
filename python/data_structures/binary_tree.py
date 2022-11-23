@@ -45,22 +45,8 @@ class BinaryTree:
         # method body here
         pass
 
-    # def pre_order(self):
-
-    # pre_order_traversal = []
-    #     if self.root is not None:
-    #         return None
-    #
-    #     def traversal_pre_order(root):
-    #         pre_order_traversal.append(root.value)
-    #         if root.left is not None:
-    #             traversal_pre_order(root.left)
-    #         if root.right is not None:
-    #             traversal_pre_order(root.right)
-    #         traversal_pre_order(self.root)
-    #         return pre_order_traversal
-
-    def pre_order(self, values=[]):
+    def pre_order(self):
+        values = []
 
         def walk(input_node, value_list):
             if not input_node:
@@ -71,44 +57,41 @@ class BinaryTree:
         walk(self.root, values)
         return values
 
-    def in_order(self, values=[]):
-        def new_walk(input_node2, value_list2):
-            if input_node2.left:
-                new_walk(input_node2.left, value_list2)
-            value_list2.append(input_node2.value)
-            if input_node2.right:
-                new_walk(input_node2.right, value_list2)
+    def in_order(self):
+        values = []
+
+        def new_walk(input_node, values_list):
+            if not input_node:
+                return None
+            if input_node.left:
+                new_walk(input_node.left, values_list)
+            values_list.append(input_node.value)
+            if input_node.right:
+                new_walk(input_node.right, values_list)
 
         new_walk(self.root, values)
         return values
 
-    def post_order(self, values=[]):
-        def another_walk(input_node3, value_list3):
-            if input_node3.left:
-                another_walk(input_node3.left, value_list3)
-            if input_node3.right:
-                another_walk(input_node3.right, value_list3)
-            value_list3.append(input_node3.value)
+    def post_order(self):
+        values = []
+
+        def another_walk(input_node, value_list):
+            if not input_node:
+                return None
+            if input_node.left:
+                another_walk(input_node.left, value_list)
+            if input_node.right:
+                another_walk(input_node.right, value_list)
+            value_list.append(input_node.value)
         another_walk(self.root, values)
         return values
 
-    def find_maximum_value(self, values=[]):
-        max_val = 0
-        current = self.root
-
-        def walking(current_val, value_list4):
-            if current is not None:
-                if current_val.left:
-                    walking(current_val.left, value_list4)
-                if current_val.right:
-                    walking(current_val.right, value_list4)
-        if self.root is None:
-            return max_val
-        if self.root == "":
-            raise InvalidOperationError(Exception("Method not allowed on string."))
-        while current.value > max_val:
-            max_val += current.value
-            walking(self.root, values)
+    def find_maximum_value(self):
+        max_val = None
+        node_list = self.post_order()
+        for val in node_list:
+            if max_val is None or val > max_val:
+                max_val = val
         return max_val
 
 
