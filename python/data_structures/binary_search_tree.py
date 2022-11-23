@@ -3,40 +3,41 @@ from data_structures.binary_tree import BinaryTree, Node
 
 class BinarySearchTree(BinaryTree):
 
-    def add(self, values=[]):
-        new_value = Node(values)
+    def add(self, value_input):
+
+        new_value = Node(value_input)
 
         if self.root is None:
             self.root = new_value
-            current = self.root
-            if values is not None or type(values) == str:
-                return "Node must be equal to integer"
+            return new_value
+        current = self.root
 
-            while current is not None:
-                if current.values > values:
-                    if current.left is not None:
-                    # values.append
-                        current.left = new_value
-                    else:
-                        current = current.left
+        while current is not None:
+            if current.value > value_input:
+                if current.left is None:
+                    current.left = new_value
+                    return
+                else:
+                    current = current.left
 
-                # elif current.values < values:
-                #     if current.right is None:
-                #         current.right = new_value
-                #     else:
-                #         current = current.right
+            if current.value < value_input:
+                if current.right is None:
+                    current.right = new_value
+                    return
+                else:
+                    current = current.right
 
-                if current.values == values:
+                if current.value == value_input:
                     return "Value already exists in the tree"
 
     def contains(self, values):
         current = self.root
         while current is not None:
-            if current.values > values:
+            if current.value > values:
                 current = current.left
-            if current.values < values:
+            if current.value < values:
                 current = current.right
-            if current.values == values:
+            if current.value == values:
                 return True
             else:
                 return False
