@@ -93,6 +93,8 @@ class BinaryTree:
             if max_val is None or val > max_val:
                 max_val = val
         return max_val
+        if max_val == "":
+            raise InvalidOperationError(Exception("Invalid data type."))
 
 
 class Node:
