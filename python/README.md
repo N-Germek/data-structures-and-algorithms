@@ -18,6 +18,7 @@
 [Code Challenge 15](docs/trees/README.md)
 [Code Challenge 16](docs/tree_max/README.md)
 [Code Challenge 17](docs/tree_breadth_first/README.md)
+[Code Challenge 18](docs/tree_fizz_buzz/README.md)
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
