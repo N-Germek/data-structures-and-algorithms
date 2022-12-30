@@ -1,7 +1,7 @@
 # Blog Notes: Insertion Sort
 
-The problem domain we have here today is to write a blog article with visuals that takes you through a ste[ by step walk-through of what Insertion Sort does in an
-algorithm.
+The problem domain we have here today is to write a blog article with visuals that takes you through a step by step
+walk-through of what Insertion Sort does in an algorithm.
 
 ## Whiteboard Process
 
@@ -64,3 +64,7 @@ Version 1 *Created the initial code challenge and started with the blog post* 29
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+
+## References
+
+[Insertion Sort](https://canvas.instructure.com/courses/5298434/assignments/32434068?return_to=https%3A%2F%2Fcanvas.instructure.com%2Fcalendar%23view_name%3Dmonth%26view_start%3D2022-12-29)
