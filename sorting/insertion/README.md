@@ -35,24 +35,27 @@ On our first pass it will look like this:
 ```
  i = 0,  length = 6 indexes
 [8,    4,   23,   42,   16,   15]
- 0 --> 1 --> 2 --> 3 --> 4 --> 5
+ ^     ^     ^     ^     ^     ^
+ 0 --> 1 --> 2 --> 3 --> 4 --> 5 --> None
 ```
 
 Second step is to assign a variable to our second loop.  This will be the way in which we will pinpoint the rest of the
-list to compare the integer to for sorting purposes.
+list to compare the selected integer to for sorting purposes.
 
 ```
  j = 0,  length = 6 indexes
 [8,    4,   23,   42,   16,   15]
- 0 --> 1 --> 2 --> 3 --> 4 --> 5
+ ^     ^     ^     ^     ^     ^
+ 0 --> 1 --> 2 --> 3 --> 4 --> 5 --> None
 ```
 
 Now we will assign a variable for our integer that we will be comparing the rest to.
 
 ```
-temp = 8
-[8,    4,   23,   42,   16,   15]
  0 --> 1 --> 2 --> 3 --> 4 --> 5
+[8,    4,   23,   42,   16,   15]
+ ^
+temp = 8
 ```
 
 ## Approach & Efficiency
