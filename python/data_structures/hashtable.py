@@ -32,47 +32,23 @@ class Hashtable:
         # print(self.bucket)
         # print(new_index)
         print(key, value)
-        if key is {key}:
-            key.value = {key.value}
-            print(new_index)
-
-    # def get(self, key):
-    #     return key.value
-        # check if new key matches key in bucket index
-        # if key[new_index] is temp_key.key:
-        #     temp_key.value[new_index]
-
-        # if {key} is new_key.key:
+        # for keys in new_index[key]:
+        #     if keys is {key}:
+        #         keys.value = {key.value}
 
 
 
-        # check = self.has(key)
-        # if check is False:
-        #     pass
-            # location = self.bucket[new_key]
-            # print(location)
+    def get(self, key):
+        pass
 
-        # else:
-        #
-        #     if key in self.bucket:
-
-    # def get(self, key):
-    #     if key in self.bucket:
-    #         hashed_index = hash(key)
-    #         return hashed_index
+    def get(self, key):
+        pass
 
     def has(self, key):
-        if key in self.bucket:
-            return True
-            print("true")
-        else:
-            return False
+        pass
 
-    #
-    # def keys(self):
-    #     if self.bucket:
-    #         key_list = [hash]
-    #         return key_list
+    def keys(self):
+        pass
 
 
 if __name__ == '__main__':
