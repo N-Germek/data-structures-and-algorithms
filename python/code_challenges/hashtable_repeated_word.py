@@ -1,4 +1,4 @@
-from data_structures.hashtable import Hashtable
+# from data_structures.hashtable import Hashtable
 
 
 def first_repeated_word():
@@ -48,7 +48,7 @@ def first_repeated_word():
 #
 # repeated_word(str)
 
-----------------------------------------------------------------
+# ----------------------------------------------------------------
 # if str is None:
 
 # 	raise Exception(f'String is Empty')
