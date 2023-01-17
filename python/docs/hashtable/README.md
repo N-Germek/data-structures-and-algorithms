@@ -12,6 +12,9 @@ Utilizing the single responsibility principal, testing should pass for each of t
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+*Version 1.0* Initial creation of Hashtable class and initiation of methods. Updated README.md and link in root
+README.md - 14 January 2023
+
 ## API
 
 set() - Should take in the arguments of a key and value, return nothing, should include hashing of the key setting the
