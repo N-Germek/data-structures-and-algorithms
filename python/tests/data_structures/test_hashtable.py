@@ -15,7 +15,7 @@ def test_get_apple():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_internals():
     hashtable = Hashtable(1024)
     hashtable.set("ahmad", 30)
@@ -27,7 +27,7 @@ def test_internals():
     # NOTE: purposely breaking encapsulation to test the "internals" of Hashmap
     for item in hashtable._buckets:
         if item:
-            actual.append(item.display())
+            actual.append(item)
 
     expected = [[["silent", True], ["listen", "to me"]], [["ahmad", 30]]]
 
