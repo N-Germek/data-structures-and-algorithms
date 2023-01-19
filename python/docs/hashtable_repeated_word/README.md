@@ -6,15 +6,17 @@ Return: string
 
 ## Whiteboard Process
 
-[Hashmap Repeated Word](/python/docs/hashtable_repeated_word/hashmap_repeated_word.png)
+[Hashmap Repeated Word](/docs/hashtable_repeated_word/hashmap_repeated_word.png)
 
 ## Approach & Efficiency
 
 Approaches have not worked yet.
 
-*Version 1* Created whiteboard, updated READMD.md file, added link to root README.md and started code in hashtable code challenge.
+*Version 1* Created whiteboard, updated READMD.md file, added link to root README.md and started code in hashtable code
+challenge. - 18 January, 2023
+
+*Version 2* Refactored first_reported_word function. - 19 January, 2023
 
 ## Solution
 
-At the moment I have not been able to make a solution work. Still work in progress.
-<!-- Show how to run your code, and examples of it in action -->
+[Hashmap Duplicate](/code_challenges/hashtable_repeated_word.py)
