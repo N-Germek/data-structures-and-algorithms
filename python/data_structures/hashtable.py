@@ -20,13 +20,13 @@ class Hashtable:
             if keys exist in list
                 return a list of all keys
 
-    hash() - Should take in the argument of the key and return the index of the collection of that key.
+    hash(takes in a key)
+        assigns an index to key with a hash value
     """
 
     def __init__(self, size=1024):
         self.size = size
         self._buckets = size * [None]
-        # print(self.bucket)
 
     def hash(self, key):
         hash_sum = 0
