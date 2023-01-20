@@ -23,6 +23,7 @@
 [Code Challenge 27](/sorting/merge/README.md)
 [Code Challenge 30](docs/hashtable/README.md)
 [Code Challenge 31](docs/hashtable_repeated_word/README.md)
+[Code Challenge 32](docs/tree_intersection/README.md)
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
