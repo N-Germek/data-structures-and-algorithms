@@ -6,7 +6,7 @@ def test_exists():
     assert Graph
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_node():
 
     graph = Graph()
