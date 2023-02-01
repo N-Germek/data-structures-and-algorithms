@@ -40,62 +40,72 @@ class Graph:
     else return zero
     """
 
-    def __init__(self, head=None, size=0):
-        self.head = head
-        self.size = size
+    def __init__(self):
+        # self.size = size
+        # initializing what graph looks like.
+        self.collection_list = {}
 
     def add_node(self, value):
         vertex = Vertex(value)
-        collection_list = []
-        if self.head is None:
-            self.head = vertex
-            collection_list.append(vertex)
-        elif self.head is not None:
-            vertex.next = self.head
-            self.head = vertex
-        return
+        self.collection_list[vertex] = []
+        return vertex
 
-    def add_edge(self, node_value, another_node_value):
-        node = Vertex(node_value)
-        node.next = Vertex(another_node_value)
-        edge = 0
-        if node_value in graph_view and another_node_value in graph_view:
-            edge += 1
+    def add_edge(self, node1, node2, weight=0):
+        if node1 in self.collection_list and node2 in self.collection_list:
+            # this will assign the value of the edge to start the link to node2
+            edge1 = Edge(node1, node2, weight)
+            #  this will assign the value of the edge to end the link for node1
+            self.collection_list[node1].append(edge1)
+    #         {node1: [edge(which includes node2 and weight for link and weight)]}
 
-    def get_node(self):
-        collection_returned = []
-        current = self.head
-        while current is not None:
-            collection_returned.append(self.head)
-            # vertex.next = self.head
-            # self.head = vertex.next
+    def get_nodes(self):
+        if self.collection_list is not None:
+            return self.collection_list
+        else:
+            return {}
 
-    def get_neighbors(self):
+    def get_neighbors(self, vertex1):
         pass
+        # look for solution in 6 lines of code or less:
+        # edge_collection = {}
+        # neighbor = vertex1.neighbor
+        # if vertex1 is not None:
+        #     return edge_collection
+        # elif Edge(vertex1, vertex1.neighbor) != 0:
+        #     edge_collection[vertex1].append(neighbor)
+        #
+        #     vertex1.neighbor
+        # neighbor_node = self.get_neighbors(vertex1)
+        # edge = Edge(vertex1, neighbor_node)
+        #
+        # while edge in self.collection_list:
+        #     edge_collection[vertex1].append(edge, weight)
+        #     return edge_collection
 
     def get_size(self):
-        total_vertex = 0
-        current = self.head
-        while current is not None:
-            total_vertex += 1
-            return total_vertex
-        return 0
-
-    def some_method(self):
-        # method body here
-        pass
+        if self.collection_list is not None:
+            return len(self.collection_list)
+        else:
+            return 0
+        # total_vertex = 0
+        # current = self.head
+        # while current is not None:
+        #     total_vertex += 1
+        #     return total_vertex
+        # return 0
 
 
 class Vertex:
-    def __init__(self, value, next=None):
+    def __init__(self, value):
         self.value = value
-        self.next = next
 
 
 class Edge:
 
-    def __init__(self, size=0):
-        self.size = size
+    def __init__(self, start, end, weight=0):
+        self.weight = weight
+        self.start = start
+        self.end = end
 
 
 if __name__ == '__main__':
