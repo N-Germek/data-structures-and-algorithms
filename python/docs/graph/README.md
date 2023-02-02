@@ -9,8 +9,13 @@ add_node(), add_edge(), get_nodes(), get_neighbors(), get_size().
 
 ## Approach & Efficiency
 
+*Version 1.0* Create initial code, complete whiteboard and methods, troubleshoot method error. - 30 January 2023
+*Version 2.0* Create README.md, attach whiteboard, refactor first two methods and start two more methods. -31 January 2023
+*Version 3.0* Complete README.md, refactor
+
 [Whiteboard for Visual aid of Implementation](/docs/graph/graphs.png)
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+For BigO time and space for Adjacency List Graph is O(n<sup>2</sup>) in the case of a complete graph.
 
 ## API
 
