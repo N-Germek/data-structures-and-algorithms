@@ -1,9 +1,9 @@
 class Graph:
     """
     Algorithm:
-    create graph class
-    create node class
-    create size class
+    create graph class passing dictionary
+    create vertex class passing vertex value
+    create edge class passing
 
     instantiate a graph by defining a list
     instantiate a node by declaring a value and adding attribute of next and previous
