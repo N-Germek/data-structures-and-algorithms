@@ -2,41 +2,36 @@ class Graph:
     """
     Algorithm:
     create graph class passing dictionary
+        instantiate a graph by defining a dictionary
     create vertex class passing vertex value
-    create edge class passing
+        instantiate a node by declaring a value and adding the vertex to the dictionary
+    create edge class passing vertex and weight
+        instantiate a vertex with value and instantiate edge weight
 
-    instantiate a graph by defining a list
-    instantiate a node by declaring a value and adding attribute of next and previous
-    instantiate a size by passing a node with value and adding attribute of edge and weight
-
+    add_node():
     if graph list is empty,
-    add node with value and assign size to 1 node
-    return node with value
+    add vertex with value to graph
+    return vertex with value
 
-    check graph for two nodes,
-    assign value of edge to 1
-    point edge to node1 and node2
+    add_edge():
+    check graph for two vertex,
+    create instance of edge assignment to vertex and assign weight
+    create instance of second vertex to append to other side of edge
 
-    check graph for nodes
-    define list for node results
-    if nodes exist,
-    return nodes and values in node results list
+    get_nodes():
+    check graph for vertex
+    if graph has vertex
+    return dictionary with all vertex in graph
     else return empty list
 
-    check graph for nodes
-    define neighbor list
-    define weight of edge and set to zero
-    define node to be checked (temp)
-    if node to be checked has a next or a previous
-    return neighbor list of node and value
-    return edge weight
+    get_neighbors():
+    return neighbor list of vertex edges if in graph
     else return empty list
 
-    check graph for nodes
-    define node counter
-    if nodes in length of graph
-    add node to counter
-    return total nodes counted
+    size():
+    check graph for vertex
+    if vertex in length of graph
+    return total nodes counted in the list
     else return zero
     """
 
@@ -50,14 +45,14 @@ class Graph:
         self.collection_list[vertex] = []
         return vertex
 
-    def add_edge(self, node1, node2, weight=1):
-        if node1 in self.collection_list and node2 in self.collection_list:
+    def add_edge(self, vertex1, vertex2, weight=1):
+        if vertex1 in self.collection_list and vertex2 in self.collection_list:
             # instance to take in value and weight assigned to it
             # this will assign the value of the edge to start the link to node2
-            edge2 = Edge(node2, weight)
+            edge2 = Edge(vertex2, weight)
             # creates instance of second node to append the edge to
             #  this will assign the value of the edge to end the link for node1
-            self.collection_list[node1].append(edge2)
+            self.collection_list[vertex1].append(edge2)
     #         {node1: [edge(which includes node2 and weight for link and weight)]}
         else:
             raise KeyError("no vertex to attach edge to")

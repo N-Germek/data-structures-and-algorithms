@@ -10,8 +10,9 @@ add_node(), add_edge(), get_nodes(), get_neighbors(), get_size().
 ## Approach & Efficiency
 
 *Version 1.0* Create initial code, complete whiteboard and methods, troubleshoot method error. - 30 January 2023
-*Version 2.0* Create README.md, attach whiteboard, refactor first two methods and start two more methods. -31 January 2023
-*Version 3.0* Complete README.md, refactor
+*Version 2.0* Create README.md, attach whiteboard, refactor first two methods and start two more methods. - 31 January 2023
+*Version 3.0* Complete README.md, refactoring graph code challenge. - 13 February 2023
+*Version 4.0* Completed refactoring and algorithm in graph implementation, final update to README.md. - 14 February 2023
 
 [Whiteboard for Visual aid of Implementation](/docs/graph/graphs.png)
 
