@@ -4,7 +4,6 @@ class LinkedList:
         self.head = head
 
     def __str__(self):
-        # print(ll)
         return_string = ''
         current = self.head
 
@@ -56,7 +55,6 @@ class LinkedList:
             current.next = final_node
 
     def insert_before(self, value, new_value):
-        # prior_node = Node(value)
         current = self.head
         while current and current.next is not None:
             if current.next.value == value:
@@ -66,18 +64,46 @@ class LinkedList:
                 return temp_value
             current = current.next
 
+    def reverse(self):
+        current = self.head
+        previous = None
+        print(current.value)
+        while current and current.next:
+            next = current.next
+            print(next.value)
+            current.next = previous
+            previous = current
+            print(previous.value)
+            current = next
+            print(current.value)
+        previous = self.head
+        return previous
+
+    def ll_add_one(self):
+        carryover = True
+        self.reverse()
+        current = self.head
+        while current:
+            if current.value == 9 and current.next is not None:
+                current.value = 0
+                carryover = True
+                current = current.next
+            elif current.value < 9:
+                current.value += 1
+                carryover = False
+                break
+            if current.next is None:
+                current.value = 0
+                node = Node(1)
+                current.next = None
+            self.reverse()
+            return
+
 
 class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
-    #     if self.head is not None:
-    #       node.next = self.head
-    #     self.head = node
-
-    def some_method(self):
-        # method body here
-        pass
 
 
 class TargetError:
@@ -86,28 +112,12 @@ class TargetError:
 
 if __name__ == '__main__':
     ll = LinkedList()
-    # ll = LinkedList([1, 3, 5, 6])
+    ll.insert(4)
+    # print(ll)
+    ll.insert(3)
+    ll.insert(4)
+    ll.insert(5)
+    ll.insert(6)
     print(ll)
-    ll.append(4)
+    ll.reverse(ll)
     print(ll)
-    ll1 = []
-    ll1.insert[1, 2, 3]
-    ll2 = []
-    ll2 = ["a", "b", "c"]
-    # node1 =
-#     node1 = Node("a")
-
-    # node = Node("a")
-
-#     node2 = Node("b")
-#     node3 = Node("c")
-#     node = Node(10, None)
-#     print(node.value)
-#     ll.insert("banana")
-#     print(node.value)
-#     ll.insert("apple")
-#     print(ll.head.value)
-#     print(ll.__str__())
-#     print(ll)
-# node2 = Node(5, node)
-# ll.head = node2
