@@ -49,8 +49,8 @@ class Queue:
                 self.rear.next = new_node
 
     def dequeue(self):
-        # if self.front is None:
-        #     raise InvalidOperationError(Exception())
+        if self.front is None:
+            raise InvalidOperationError(Exception())
         if self.front:
             temp = self.front
             self.front = self.front.next
